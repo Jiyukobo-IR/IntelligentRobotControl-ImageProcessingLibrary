@@ -1,5 +1,5 @@
 # IntelligentRobotControl-ImageProcessingLibrary
 # 画像処理を用いたボールの認識およびライントレースのPythonライブラリです。
-## LineTrace.py:画像処理を用いたライントレースライブラリ
-## ColorBallSearch.py:画像処理を用いて赤・青・黄色の3色のカラーボールを認識するためのライブラリ
+## LineTrace.py：画像処理を用いたライントレースライブラリ
+## ColorBallSearch.py：画像処理を用いて赤・青・黄色の3色のカラーボールを認識するためのライブラリ
 ## CorrectionValueSearch.py：ColorBallSearch.pyは周囲の光の影響を大きく受けるため、場所に応じてライブラリ内のadjust関数の補正値を調整する必要があります。これはその補正値を総当たりで検証し、その場に応じた補正値を検出するためのプログラムです。
