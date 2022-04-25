@@ -66,5 +66,13 @@ class LineTrace:
                 self.R_PWM = self.R_PWM_old + self.Kp * (self.R_e-self.R_e1) + self.Ki * self.R_e + self.Kd * ((self.R_e-self.R_e1) - (self.R_e1-self.R_e2))
         L = round(100 + self.L_PWM)#PWMの最大値から制御量を差し引きモーターに送るPWMの値を算出
         R = round(100 - self.R_PWM)
+        if L > 100:
+            L = 100
+        if L < -100:
+            L = -100
+        if R > 100:
+            R = 100
+        if R < -100:
+            R = -100
         cv2.imshow("trace",frame)
         return L,R,Slip#左PWM,右PWM,十字を認識したかどうか(default:"None",十字認識時:"Cross"が格納)
