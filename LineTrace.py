@@ -41,7 +41,7 @@ class LineTrace:
         Slip = "None"
         frame = cv2.resize(frame,dsize=None,fx=0.5,fy=0.5)#処理の高速化のため画像のサイズを縮小
         #ret,frame = cv2.threshold(frame,self.th,self.i_max,cv2.THRESH_OTSU + cv2.THRESH_BINARY_INV)#画像を二値化(白黒の画像に変換する様なもの)
-        frame = cv2.adaptiveThreshold(frame,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY_INV,51,20)#画像を二値化(白黒の画像に変換する様なもの).こっちの方が反射光の影響とか受けな胃から良さげ
+        frame = cv2.adaptiveThreshold(frame,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY_INV,51,20)#画像を二値化(白黒の画像に変換する様なもの).こっちの方が反射光の影響とか受けないから良さげ
         frame = cv2.medianBlur(frame,5)
         #print(ret)
         frame = frame[self.trim_y:self.trim_y+self.trim_h,]#画像を必要な大きさに切り取り
